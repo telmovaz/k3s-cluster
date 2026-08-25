@@ -17,8 +17,8 @@ output "vms" {
   description = "All VM information"
   value = {
     master = {
-      name   = libvirt_domain.k3s_master.name
-      id     = libvirt_domain.k3s_master.id
+      name = libvirt_domain.k3s_master.name
+      id   = libvirt_domain.k3s_master.id
     }
     worker1 = {
       name = libvirt_domain.k3s_worker1.name
