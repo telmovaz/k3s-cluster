@@ -29,8 +29,8 @@ resource "libvirt_domain" "k3s_master" {
   }
 
   network_interface {
-    network_name = "default"
-  }
+  bridge = "br0"  
+}
 
   console {
     type        = "pty"
@@ -58,8 +58,8 @@ resource "libvirt_domain" "k3s_worker1" {
   }
 
   network_interface {
-    network_name = "default"
-  }
+  bridge = "br0"  
+}
 
   console {
     type        = "pty"
@@ -87,8 +87,8 @@ resource "libvirt_domain" "k3s_worker2" {
   }
 
   network_interface {
-    network_name = "default"
-  }
+  bridge = "br0"  
+}
 
   console {
     type        = "pty"
