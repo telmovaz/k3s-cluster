@@ -1,0 +1,19 @@
+#cloud-config
+
+users:
+  - name: ansible
+    groups:
+      - sudo
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID0hYVg7U4cIz2iAek3uOCAee9rn3sjptksHLdpI3tRU telmo@telmo-System-Product-Name
+  - name: telmo
+    groups:
+      - sudo
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
+    lock_passwd: false
+    plain_text_passwd: "yareyare"
+
+ssh_pwauth: false
