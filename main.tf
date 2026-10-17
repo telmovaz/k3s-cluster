@@ -8,10 +8,10 @@ terraform {
   }
 }
 
-/* provider "libvirt" {
-  uri = "qemu+ssh://${var.kvm_user}@${var.kvm_host}/system"
+provider "libvirt" {
+  uri = "qemu+ssh://telmo@192.168.0.100/system"
 }
- */
+
 # Ubuntu 22.04 base image
 resource "libvirt_volume" "ubuntu" {
   name   = "ubuntu-22.04-base"

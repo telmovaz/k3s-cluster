@@ -9,3 +9,13 @@ variable "kvm_user" {
   type        = string
   default     = "telmo"
 }
+
+variable "pc_ip" {
+  description = "IP address of the PC running libvirt"
+  type        = string
+}
+
+variable "pc_user" {
+  description = "Username for SSH connection to PC"
+  type        = string
+}
