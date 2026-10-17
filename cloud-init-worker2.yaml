@@ -1,5 +1,5 @@
 #cloud-config
-
+hostname: worker-2
 users:
   - name: ansible
     groups:
